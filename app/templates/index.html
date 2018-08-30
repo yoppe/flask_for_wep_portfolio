@@ -1,0 +1,139 @@
+{% extends "appbuilder/base.html" %}
+{% block content %}
+<style type="text/css">
+  body{
+    background: linear-gradient(to left, #c1eace, #64b3f4);
+    font-family: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
+  }
+  h1{
+    font-size: 52px;
+  }
+  h2{
+    font-size: 46px;
+    text-align: center;
+    padding: 0 0 34px;
+  }
+  h3{
+    padding: 0 0 40px;
+  }
+  .wapper{
+    color: white;
+  }
+  .container-block{
+    padding: 40px;
+  }
+  .container-block-top{
+    margin: 160px 0 120px;
+  }
+  
+  .skills{
+    list-style-type: none;
+  }
+  .skill-block{
+    padding: 32px;
+    float: left;
+    background: white;
+    height: 300px;
+    width: 272px;
+    overflow-y: scroll;
+  }
+  .skill-block.highlight-level-1 {
+    color: #999;
+    opacity: 0.6;
+  }
+  .skill-block.highlight-level-2 {
+    color: #777;
+    opacity: 0.68;
+  }
+  .skill-block.highlight-level-3 {
+    color: #555;
+    opacity: 0.77;
+  }
+  .skill-block.highlight-level-4 {
+    color: #333;
+    opacity: 0.86;
+  }
+  .skill-block.highlight-level-5 {
+    color: #111;
+    opacity: 0.95;
+  }
+  .skill-block:hover {
+    transition: 0.5s;
+    opacity: 1;
+    color: #000;
+    text-shadow: #b9b9b9 1px 1px 5px;
+  }
+  .skill-block .skill-name{
+    font-size: 24px;
+  }
+  
+  .contacts{
+    font-size: 24px;
+    text-align: center;
+    list-style: none;
+  }
+  .contact-block{
+    margin: 18px;
+  }
+</style>
+
+<div class="wapper">
+
+  <div class="container container-block container-block-top">
+    
+    <h1>Yamada Taro Portfolio</h1>
+    <h3>Webエンジニア</h3>
+    <p>自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介</p>
+    <p>自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介</p>
+    <p>自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介</p>
+
+  </div>
+
+  <hr>
+  
+  <div class="container container-block">
+    
+    <h2>My Skills</h2>
+
+    <ui class="skills">
+
+      {% for skill in skills %}
+      <li class="skill-block highlight-level-{{ skill.learning_level }}">
+        <p class="skill-name">{{ skill.name }}</p>
+        
+        <p>Level: 
+        {% for x in range(skill.learning_level) %}
+          <i class="fa fa-star"></i>
+        {% endfor %}
+        </p>
+
+        <p class="hover-show">{{ skill.description }}</p>
+      </li>
+      {% endfor %}
+
+    </ui>
+  </div>
+
+  <hr>
+
+  <div class="container container-block">
+    
+    <h2>Contact me</h2>
+
+    <ui class="contacts">
+      <li class="contact-block">
+        Email: <a href="http://google.com">yamada@example.com</a>
+      </li>
+      <li class="contact-block">
+        Facebook: <a href="http://google.com">Yamada Taro</a>
+      </li>
+      <li class="contact-block">
+        Qiita: <a href="http://google.com">Yamada Taro</a>
+      </li>
+    </ui>
+
+  </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,4 @@
+*.db
+*.env
+*.c9
+__pycache__
