@@ -2,3 +2,4 @@
 *.env
 *.c9
 __pycache__
+.idea
