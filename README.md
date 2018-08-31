@@ -1,6 +1,8 @@
 flask for wep portfolio
 # 「【学生限定】初心者歓迎！はじめてのWebアプリ開発 ハンズオン【Python】」勉強会のためのWebポートフォリオ作成用のFlask App Builder実装
 
+元記事： https://qiita.com/yoppe/items/651a9ce8a7c655299eda
+
 本ハンズオンチュートリアルは [findlabの勉強会](https://findlab.connpass.com/event/98271/)用の資料です。
 一応、勉強会に参加していなくて使えるように作っています。
 
